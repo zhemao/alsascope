@@ -3,3 +3,13 @@ Alsascope: Ncurses-based oscilloscope for ALSA
 
 Alsascope uses the ncurses and alsa libraries to display an oscilloscope
 readout of your computer's microphone readings inside your terminal.
+
+Keybindings:
+
+q: quit
+
+
+Coming Soon:
+
+Sound card selection
+FFT Display
