@@ -16,7 +16,9 @@ int main(int argc, char *argv[]){
 	short *buffer;
 	int i;
 
-	rc = snd_pcm_open(&handle, "default", SND_PCM_STREAM_CAPTURE, 0);
+	if(argc < 2)
+		rc = snd_pcm_open(&handle, "default", SND_PCM_STREAM_CAPTURE, 0);
+	else rc = snd_pcm_open(&handle, argv[1], SND_PCM_STREAM_CAPTURE, 0);
 
 	if(rc < 0)
 		die("Could not open pcm device", rc);
